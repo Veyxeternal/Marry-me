@@ -135,13 +135,17 @@ function typeText(text) {
 /* =========================
    🌙 FINAL SCREEN
    ========================= */
-
 function finalScene() {
   document.body.innerHTML = `
     <div class="card">
       <h2 style="font-size:28px;">❤️ One Last Thing</h2>
-      <button onclick="showFinal()" class="yes">Tap</button>
+      <button id="finalBtn" class="yes">Tap</button>
     </div>
+  `;
+
+  document.getElementById("finalBtn").addEventListener("click", showFinal);
+}
+l
   `;
 }
 
