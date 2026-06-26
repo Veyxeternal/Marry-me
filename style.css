@@ -1,99 +1,27 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-body{
-height:100vh;
-overflow:hidden;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(180deg,#050816,#0b1228,#111827);
-color:white;
+#app {
+  width: 90%;
+  max-width: 500px;
 }
 
-#stars{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-overflow:hidden;
-z-index:-2;
-}
-
-.star{
-position:absolute;
-width:2px;
-height:2px;
-background:white;
-border-radius:50%;
-animation:twinkle 3s infinite alternate;
-}
-
-@keyframes twinkle{
-from{
-opacity:.2;
-transform:scale(.8);
-}
-to{
-opacity:1;
-transform:scale(1.6);
-}
-}
-
-.glass{
-width:90%;
-max-width:500px;
-padding:35px;
-text-align:center;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.15);
-border-radius:24px;
-box-shadow:0 0 50px rgba(255,255,255,.08);
-animation:fade 1.5s;
-}
-
-h1{
-font-size:2rem;
-margin-bottom:20px;
-}
-
-p{
-font-size:1.1rem;
-line-height:1.8;
-margin-bottom:30px;
-opacity:.95;
-}
-
-button{
-padding:15px 35px;
-font-size:18px;
-border:none;
-border-radius:50px;
-cursor:pointer;
-background:#ff4f81;
-color:white;
-transition:.35s;
-box-shadow:0 0 20px rgba(255,79,129,.5);
-}
-
-button:hover{
-transform:scale(1.08);
-box-shadow:0 0 35px rgba(255,79,129,.9);
-}
-
-@keyframes fade{
-from{
-opacity:0;
-transform:translateY(40px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+button {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  background: white;
+  color: black;
 }
