@@ -1,155 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+<title>For My Love ❤️</title>
 
-body{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
-overflow:hidden;
-color:white;
-text-align:center;
-}
-
-.container{
-padding:30px;
-max-width:700px;
-animation:fade 2s;
-}
-
-h1{
-font-size:2.8rem;
-margin-bottom:20px;
-}
-
-p{
-font-size:1.2rem;
-line-height:1.8;
-margin-bottom:30px;
-}
-
-button{
-padding:15px 35px;
-font-size:20px;
-border:none;
-border-radius:50px;
-cursor:pointer;
-background:#ff4d6d;
-color:white;
-transition:.3s;
-}
-
-button:hover{
-transform:scale(1.08);
-}
-
-.popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.85);
-display:none;
-justify-content:center;
-align-items:center;
-}
-
-.box{
-background:white;
-color:#222;
-padding:35px;
-border-radius:20px;
-text-align:center;
-width:90%;
-max-width:400px;
-}
-
-.box h2{
-margin-bottom:20px;
-}
-
-.box button{
-margin:10px;
-}
-
-@keyframes fade{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container">
-<h1>Hi, My Love ❤️</h1>
+<div id="stars"></div>
 
-<p>
-Before you close this page...
-there's something I've wanted to ask you.
+<div id="container">
+
+<div class="glass">
+
+<h1 id="title">
+Before you leave...
+</h1>
+
+<p id="message">
+There's something I've wanted to ask you for a very long time.
 </p>
 
-<button onclick="showPopup()">
+<button id="continueBtn">
 Open My Heart ❤️
 </button>
 
 </div>
 
-<div class="popup" id="popup">
-
-<div class="box">
-
-<h2>💍 Will You Marry Me?</h2>
-
-<button onclick="yes()">Yes ❤️</button>
-
-<button id="no" onmouseover="moveNo()">No 🙈</button>
-
 </div>
 
-</div>
-
-<script>
-
-function showPopup(){
-document.getElementById("popup").style.display="flex";
-}
-
-function yes(){
-document.body.innerHTML=`
-<div style="height:100vh;display:flex;justify-content:center;align-items:center;background:#111827;color:white;text-align:center;padding:30px;">
-<div>
-<h1>❤️ You Just Made Me The Happiest Person Alive ❤️</h1>
-<br>
-<p>I love you more than words could ever express.</p>
-</div>
-</div>
-`;
-}
-
-function moveNo(){
-let btn=document.getElementById("no");
-btn.style.position="absolute";
-btn.style.left=Math.random()*80+"%";
-btn.style.top=Math.random()*80+"%";
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
